@@ -3,14 +3,14 @@
 ## How to use
 
 ```bash
-#Create a bare clone
+# Create a bare clone
 git clone --bare https://github.com/fryasha/react-redux-boiler.git
 
-#Push mirror to a new Repository
+# Push mirror to a new Repository
 cd react-redux-boiler.git
 git push --mirror https://github.com/exampleuser/new-repository.git
 
-#Remove bare clone
+# Remove bare clone
 cd .. && rm -rf react-redux-boiler.git
 ```
 
