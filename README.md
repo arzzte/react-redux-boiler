@@ -7,7 +7,7 @@
 git clone --bare https://github.com/fryasha/react-redux-boiler.git
 
 #Push mirror to a new Repository
-cd old-repository.git
+cd react-redux-boiler.git
 git push --mirror https://github.com/exampleuser/new-repository.git
 
 #Remove bare clone
