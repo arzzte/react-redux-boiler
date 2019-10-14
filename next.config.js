@@ -21,7 +21,6 @@ module.exports = withStylus({
               loader: useRule,
             };
           }
-
           if (useRule.loader.startsWith('css-loader')) {
             return {
               oneOf: [
