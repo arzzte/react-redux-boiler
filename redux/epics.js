@@ -1,10 +1,7 @@
-import { interval, of } from 'rxjs';
-import { takeUntil, mergeMap, catchError, map } from 'rxjs/operators';
-import { combineEpics, ofType } from 'redux-observable';
-import { request } from 'universal-rxjs-ajax';
-
-import * as actions from './actions';
-import * as types from './actionTypes';
+import { interval, of } from "rxjs";
+import { takeUntil, mergeMap, catchError, map } from "rxjs/operators";
+import { combineEpics, ofType } from "redux-observable";
+import { request } from "universal-rxjs-ajax";
 
 // export const fetchUserEpic = (action$, state$) =>
 //   action$.pipe(

@@ -1,4 +1,9 @@
 // 
+// mains
+// 
+$mainFont = '';
+$secondFont = '';
+// 
 // easings
 // 
 $inQuad = cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -30,16 +35,18 @@ $inOutSine = cubic-bezier(0.645, 0.045, 0.355, 1);
 $hoverIn = 0.35s $OutQuad;
 $hoverOut = 0.35s $InQuad;
 $t3d = translateZ(0) perspective(1px);
-
 // 
 
 // 
 // colors
 // 
-
+$bgColor = #F7F5ED;
+$txColor = #E17C1C;
 // 
 // secondary
 // 
+$desktopBase = 16;
+$mobileBase = 16;
 
 // 
 // margins, paddings
@@ -49,59 +56,49 @@ $t3d = translateZ(0) perspective(1px);
 // 
 // mixins
 // 
-fzd(n) {
-  font-size: (n / 19.2) vw;
-}
-
-fzdm(d, m) {
-  font-size: (d / 19.2) vw;
+fz(d, m = d) {
+  font-size: (d / $desktopBase) rem;
 
   @media screen and (max-width: 1024px) {
-    font-size: (m / 3.75) vw;
+    font-size: (m / $mobileBase) rem;
   }
 }
 
-lsd(n) {
-  letter-spacing: (n / 19.2) vw;
+ffm() {
+  font-family: $mainFont;
 }
 
-lsdm(d, m) {
-  letter-spacing: (d / 19.2) vw;
-
-  @media screen and (max-width: 1024px) {
-    letter-spacing: (m / 3.75) vw;
-  }
+ffs() {
+  font-family: $secondFont;
 }
 
-lhd(n) {
-  line-height: (n / 19.2) vw;
-}
-
-lhdm(d, m) {
-  line-height: (d / 19.2) vw;
-
-  @media screen and (max-width: 1024px) {
-    line-height: (m / 3.75) vw;
-  }
-}
-
-// mobile
-fzm(n) {
-  font-size: (n / 3.75) vw;
-}
-
-lsm(n) {
-  letter-spacing: (n / 3.75) vw;
-}
-
-lhm(n) {
-  line-height: (n / 3.75) vw;
+lh(n) {
+  line-height: n;
 }
 
 dfc() {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+dfcc() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+pf() {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+rm(size) {
+  return (size / $mobileBase) rem;
 }
 
 // 
@@ -126,6 +123,10 @@ vhm(size) {
   return 'calc(var(--vh, 1vh) * %s)' % fin;
 }
 
+rm(size) {
+  return (size / $mobileBase) rem;
+}
+
 trns(ease, props) {
   base = b;
 
@@ -138,4 +139,9 @@ trns(ease, props) {
   }
 
   return substr(base, 2);
+}
+
+:export {
+  desktopBase: $desktopBase;
+  mobileBase: $mobileBase;
 }
