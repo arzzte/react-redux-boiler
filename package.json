@@ -9,9 +9,9 @@
   },
   "author": "v.braginov@gmail.com",
   "dependencies": {
-    "@zeit/next-stylus": "^1.0.1",
+    "@zeit/next-stylus": "1.0.1",
     "classnames": "^2.2.6",
-    "next": "latest",
+    "next": "9.0.6",
     "next-redux-wrapper": "^2.0.0-beta.6",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
