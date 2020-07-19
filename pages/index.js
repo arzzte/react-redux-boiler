@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import css from "./styles/index.styl";
-import MetaHead from "../fragments/meta-head";
+import React from 'react';
+import css from './styles/index.styl';
+import MetaHead from '../fragments/meta-head';
 
 const Index = () => (
   <>

@@ -3,6 +3,7 @@
 // 
 $mainFont = '';
 $secondFont = '';
+$mqMob = 'screen and (max-width: 768px)';
 // 
 // easings
 // 
@@ -59,7 +60,7 @@ $mobileBase = 16;
 fz(d, m = d) {
   font-size: (d / $desktopBase) rem;
 
-  @media screen and (max-width: 1024px) {
+  @media $mqMob {
     font-size: (m / $mobileBase) rem;
   }
 }
@@ -72,8 +73,12 @@ ffs() {
   font-family: $secondFont;
 }
 
-lh(n) {
-  line-height: n;
+lh(d, m = d) {
+  line-height: d;
+
+  @media $mqMob {
+    line-height: d;
+  }
 }
 
 dfc() {
@@ -97,7 +102,16 @@ pf() {
   height: 100vh;
 }
 
+bspad(n) {
+  box-sizing: border-box;
+  padding: n;
+}
+
 rm(size) {
+  return (size / $desktopBase) rem;
+}
+
+mrm(size) {
   return (size / $mobileBase) rem;
 }
 

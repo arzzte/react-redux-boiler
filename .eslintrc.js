@@ -34,14 +34,18 @@ module.exports = {
     'max-len': [
       2,
       {
-        code: 100,
+        code: 120,
+        ignoreStrings: true,
       },
     ],
-    'jsx-a11y/anchor-is-valid': 0,
     'no-confusing-arrow': 0,
     'jsx-a11y/click-events-have-key-events': 0,
     'jsx-a11y/no-static-element-interactions': 0,
     'jsx-a11y/no-noninteractive-element-interactions': 0,
     'class-methods-use-this': 0,
+    'linebreak-style': 0,
+    'operator-linebreak': 0,
+    'object-curly-newline': 0,
+    'react/jsx-one-expression-per-line': 0,
   },
 };

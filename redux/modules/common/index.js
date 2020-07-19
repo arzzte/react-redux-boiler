@@ -5,7 +5,7 @@ const initialState = {
 
 // actionTypes
 const actionTypes = {
-  SELECT_ITEM: "SELECT_ITEM",
+  SELECT_ITEM: 'SELECT_ITEM',
 };
 
 // Reducer

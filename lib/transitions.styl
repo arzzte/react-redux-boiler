@@ -1,0 +1,23 @@
+.appear {
+	&-enter {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+
+	&-enter-active {
+		transition: opacity 0.25s $outQuad, transform 0.3s $outQuad;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+
+	&-exit {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+
+	&-exit-active {
+		opacity: 0;
+		transform: translateY(10px);
+		transition: opacity 0.2s $inQuad, transform 0.25s $inQuad;
+	}
+}
